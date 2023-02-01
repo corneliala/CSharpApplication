@@ -5,10 +5,10 @@ using Newtonsoft.Json;
 namespace ContactApplication.Services
 {
     
-    internal class MenuManager
+    public class MenuManager
     {
-        private List<IContact> contacts = new List<IContact>();
-        private FileService file = new FileService();
+        public List<IContact> contacts = new List<IContact>();
+        public FileService file = new FileService();
         
         
 

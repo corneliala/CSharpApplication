@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace ContactApplication.Services
 {
-    internal class FileService
+    public class FileService
     {
         public void Save(string filePath, string content)
         {
