@@ -109,9 +109,22 @@ namespace ContactApplication.Services
 
             if (foundContact != null)
             {
-                contacts.Remove(foundContact);
-                Console.WriteLine("Kontakten är nu borttagen.");
-               
+                Console.WriteLine("Är det här kontakten du vill ta bort?(y/n)");
+                Console.WriteLine("Förnamn: " + foundContact.FirstName);
+                Console.WriteLine("Efternamn: " + foundContact.LastName);
+                Console.WriteLine("E-postadress: " + foundContact.Email);
+                Console.WriteLine("Telefonnummer: " + foundContact.Phone);
+                Console.WriteLine("Address: " + foundContact.Address);
+                string input = Console.ReadLine() ?? "";
+                if (input.ToLower() == "y")
+                {
+                    contacts.Remove(foundContact);
+                    Console.WriteLine("Kontakten är nu borttagen.");
+                }
+                else
+                {
+                    Console.WriteLine("Du har valt att inte ta bort kontakten.");
+                }
             }
             else
             {
