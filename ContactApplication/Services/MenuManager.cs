@@ -62,6 +62,7 @@ namespace ContactApplication.Services
             {
                 Console.WriteLine($"{contact.FirstName} {contact.LastName}\n{contact.Email}\n");
             }
+            Console.WriteLine("Tryck på valfri tangent för att gå tillbaka till menyn.");
             Console.ReadKey();
             
         }
@@ -79,13 +80,19 @@ namespace ContactApplication.Services
 
             if (foundContact != null)
             {
-                Console.WriteLine("Namn: " + foundContact.FirstName + " " + foundContact.LastName);
+                Console.WriteLine("Förnamn: " + foundContact.FirstName);
+                Console.WriteLine("Efternamn: " + foundContact.LastName);
                 Console.WriteLine("E-postadress: " + foundContact.Email);
+                Console.WriteLine("Telefonnummer: " + foundContact.Phone);
+                Console.WriteLine("Address: " + foundContact.Address);
+                
             }
             else
             {
                 Console.WriteLine("Kontakten hittades inte.");
+                
             }
+            Console.WriteLine("Tryck på valfri tangent för att gå tillbaka till menyn.");
             Console.ReadKey();
         }
 
@@ -104,11 +111,13 @@ namespace ContactApplication.Services
             {
                 contacts.Remove(foundContact);
                 Console.WriteLine("Kontakten är nu borttagen.");
+               
             }
             else
             {
                 Console.WriteLine("Kontakten hittades inte.");
             }
+            Console.WriteLine("Tryck på valfri tangent för att gå tillbaka till menyn.");
             Console.ReadKey();
 
         }
